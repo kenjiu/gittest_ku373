@@ -1,2 +1,3 @@
 whatever
-this is gonna go wrong...
+whatever again
+conflict has been fixed
