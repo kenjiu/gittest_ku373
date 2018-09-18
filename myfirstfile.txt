@@ -1,4 +1,3 @@
-whatever
-whatever again
-conflict has been fixed
-Hello... I'm gonna make a foot print in your file -- WYW
+To make conflicts, I deleted all the lines.
+
+
