@@ -97,7 +97,7 @@ def process(pid, records):
 
 if __name__ =='__main__':
     from pyspark import SparkContext
-    sc = sparkContext()
+    sc = SparkContext()
     test2 = sys.argv[1]
     #neighborhoodsgeojson = sys.argv[1]    
     
