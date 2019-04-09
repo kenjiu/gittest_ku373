@@ -63,34 +63,32 @@ def process(pid, records):
             combname = tuple((boro,match))
             counts[combname] = counts.get(combname, 0) + 1               
 
-    return counts.items()
+    #return counts.items()
         
-#     m = list(map(lambda x: (x[0][0],x[0][1],x[1] ) if x[0][0] !=None and x[0][1] !=None else \
-#              tuple(("Error",'Error',1)),counts.items()))#
+    m = list(map(lambda x: (x[0][0],x[0][1],x[1] ) if x[0][0] !=None and x[0][1] !=None else \
+              tuple(("Error",'Error',1)),counts.items()))#
 
-#     n = list(filter(lambda x: x[0] !='Error' ,sorted(m, key=lambda tup: (tup[0],tup[2]), reverse=True)))
+    n = list(filter(lambda x: x[0] !='Error' ,sorted(m, key=lambda tup: (tup[0],tup[2]), reverse=True)))
 
-#     count = 0
-#     acc = 'test'
-#     acc1 = []
-#     for i in n:
-#         if i[0] == acc:
-#             if count <=2:
-#                 acc1.append(i)
-#                 count +=1
-#                 #print(count)
-#             else:
-#                 #print('a')
-#                 continue
-
-#         else:    
-#             count = 0
-#             acc = i[0]
-#             #print(acc)
-#             acc1.append(i)
-#             count +=1
-
-#     acc1
+    count = 0
+    acc = 'test'
+    acc1 = []
+    for i in n:
+        if i[0] == acc:
+            if count <=2:
+                acc1.append(i)
+                count +=1
+                 #print(count)
+            else:
+                 #print('a')
+                continue
+        else:    
+            count = 0
+            acc = i[0]
+             #print(acc)
+            acc1.append(i)
+            count +=1
+    return acc1
 
 
 
