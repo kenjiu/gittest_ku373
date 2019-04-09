@@ -96,7 +96,9 @@ def process(pid, records):
 
 
 
+
 if __name__ =='__main__':
+    from pyspark import SparkContext
     sc = sparkContext()
     test2 = sys.argv[1]
     #neighborhoodsgeojson = sys.argv[1]    
@@ -105,7 +107,3 @@ if __name__ =='__main__':
     print(sys.argv)
     print(rdd.mapPartitionsWithIndex(process).collect()) #.reduce(lambda x,y:x+y))
     
-# output = rdd.mapPartitionsWithIndex(process).collect()
-# output.saveAsTextFile("/home/ku373/")
-# spark-submit --num-executors 5 –executor-cores 5 --files hdfs:///tmp/bdm/neighborhoods.geojson application.py test2.csv
-
